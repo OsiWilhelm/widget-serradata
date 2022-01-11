@@ -2,6 +2,25 @@ import styled from 'styled-components';
 import ChatBot from 'react-simple-chatbot';
 
 export const Container = styled(ChatBot)`
+    
+    //barra superior do chatbot
+    .rsc-header{
+        background: linear-gradient(45deg,  #03a7f8, #87CEEB );
+    }
+
+    //balão de fala do bot
+
+    .rsc-ts-bot{
+        background: #2472D6;
+    }
+
+    rsc-ts-bubble{
+        background: #86d1ff;
+    }
+    
+    
+    
+    
     .kQcEQt {
         background: linear-gradient(45deg,  #03a7f8, #87CEEB );
     }
