@@ -1,73 +1,64 @@
-import styled from 'styled-components';
-import ChatBot from 'react-simple-chatbot';
+import styled from "styled-components";
+import ChatBot from "react-simple-chatbot";
 
 export const Container = styled(ChatBot)`
-    
-    //barra superior do chatbot
-    .rsc-header{
-        background: linear-gradient(45deg,  #03a7f8, #87CEEB );
-    }
+  //barra superior do chatbot
+  .rsc-header {
+    background: linear-gradient(45deg, #03a7f8, #87ceeb);
+  }
 
-    //balão de fala do bot
+  //balão de fala do bot
 
-    .rsc-ts-bot{
-        background: #2472D6;
-    }
+  .rsc-ts-bot {
+    background: #2472d6;
+  }
 
-    rsc-ts-bubble{
-        background: #86d1ff;
-    }
-    
-    
-    
-    
-    .kQcEQt {
-        background: linear-gradient(45deg,  #03a7f8, #87CEEB );
-    }
-    .rsc-header-title {
-        font-variant: DejaVu Sans Mono, monospace;
-    }
-    .gSZBXz {
-        font-size: 20px;
-    }
+  .rsc-ts-bubble {
+    background: #86d1ff;
+  }
 
-    .itYrWC {
-        background: linear-gradient(45deg,  #03a7f8, #87CEEB);
-    }
-    .erOoyR {
-        background: #2472D6;
-    }
-    .iwuaA {
-        background: rgba(199, 236, 254, 1);
-    }
-    .bHraIr:disabled {
-        background: rgba(211, 212, 255, 1)
-    }
+  .kQcEQt {
+    background: linear-gradient(45deg, #03a7f8, #87ceeb);
+  }
+  .rsc-header-title {
+    font-variant: DejaVu Sans Mono, monospace;
+  }
+  .gSZBXz {
+    font-size: 20px;
+  }
 
-    .rsc-input {
-        fontcolor: black;
-        // background: #bdbbbb;
-       
+  .itYrWC {
+    background: linear-gradient(45deg, #03a7f8, #87ceeb);
+  }
+  .erOoyR {
+    background: #2472d6;
+  }
+  .iwuaA {
+    background: rgba(199, 236, 254, 1);
+  }
+  .bHraIr:disabled {
+    background: rgba(211, 212, 255, 1);
+  }
+
+  .rsc-input {
+    fontcolor: black;
+    // background: #bdbbbb;
+  }
+
+  .rsc-submit-button {
+    fontcolor: white;
+    svg {
+      fill: #000;
     }
+  }
 
-     .rsc-submit-button{
-         fontcolor: white;
-         svg {
-            fill: #000
-        }
-        
-    } 
-
-    /* .dlHUTf{
+  /* .dlHUTf{
         background: black;
         bottom: 0em              
     } */
 
-   
-    .rsc-os-option-element{
-        // background: linear-gradient(45deg,  #03a7f8, #87CEEB);
-        background: #03a7f8;
-       }
+  .rsc-os-option-element {
+    // background: linear-gradient(45deg,  #03a7f8, #87CEEB);
+    background: #03a7f8;
+  }
 `;
-
-
