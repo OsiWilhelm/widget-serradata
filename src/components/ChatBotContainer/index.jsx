@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { OpenInNew } from "@mui/icons-material";
 import { Link } from "@mui/material";
 import ChatBoot from "../ChatBoot";
+import ListaOpcoes from "../ListaOpcoes";
 import axios from "axios";
 
 const baseURL = "http://serradata.herokuapp.com/intencoes/";
@@ -31,14 +32,7 @@ export default function ChatBotContainer() {
 
       steps.push({
         id: `${intencaoId}-opcoesMsg`,
-        message: () => {
-          let opcoesMsg = "";
-
-          intencao[0].opcoes.map(
-            (opcao, i) => (opcoesMsg += `\n${i + 1}) ${opcao.descricao}\n`)
-          );
-          return `${opcoesMsg}`;
-        },
+        component: <ListaOpcoes opcoes={intencao[0].opcoes} />,
         trigger: `${intencaoId}-opcoes`,
       });
 
