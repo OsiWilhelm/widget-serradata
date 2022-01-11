@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { OpenInNew } from "@mui/icons-material";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "@mui/material";
 import ChatBoot from "../ChatBoot";
 import ListaOpcoes from "../ListaOpcoes";
@@ -59,7 +59,7 @@ export default function ChatBotContainer() {
                   {" "}
                   Clique aqui:{" "}
                   <Link href={opcao.solucao.href}>
-                    <OpenInNew />
+                    <OpenInNewIcon />
                   </Link>
                 </div>
               ),
