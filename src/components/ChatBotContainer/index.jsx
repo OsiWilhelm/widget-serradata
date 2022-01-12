@@ -58,7 +58,7 @@ export default function ChatBotContainer() {
                 <div>
                   {" "}
                   Clique aqui:{" "}
-                  <Link href={opcao.solucao.href}>
+                  <Link href={opcao.solucao ? opcao.solucao.href : "Null"}>
                     <OpenInNewIcon />
                   </Link>
                 </div>
@@ -113,10 +113,12 @@ export default function ChatBotContainer() {
         placeholder="Digite aqui..."
         botAvatar="https://raw.githubusercontent.com/juniorcost4/widget-serradata/main/src/img/bot-avatar.png"
         steps={steps}
-        // bubbleOptionStyle={{ background:'#86d1ff' }}
-        // bubbleStyle={{ background:'#86d1ff' }}
-        floatingStyle={{ background: 'linear-gradient(45deg,  #03a7f8, #87CEEB)' }}
-        submitButtonStyle={{  color: '#000000' }}
+        bubbleOptionStyle={{ background: "#86d1ff" }}
+        bubbleStyle={{ background: "#86d1ff" }}
+        floatingStyle={{
+          background: "linear-gradient(45deg,  #03a7f8, #87CEEB)",
+        }}
+        submitButtonStyle={{ color: "#000000" }}
       />
     );
   };
