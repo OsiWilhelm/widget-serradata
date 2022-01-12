@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "@mui/material";
-import ChatBoot from "../ChatBoot";
+import ChatBot from "../ChatBot";
 import ListaOpcoes from "../ListaOpcoes";
 import axios from "axios";
 
@@ -107,12 +107,16 @@ export default function ChatBotContainer() {
     criarFluxo();
 
     return (
-      <ChatBoot
+      <ChatBot
         headerTitle="SerraData"
         floating
         placeholder="Digite aqui..."
         botAvatar="https://preview.redd.it/788khtqa7c551.png?width=960&crop=smart&auto=webp&s=a1f107f8f7af82ff61c2b9db3a511f7f81d3715c"
         steps={steps}
+        bubbleOptionStyle={{ background:'#86d1ff' }}
+        bubbleStyle={{ background:'#86d1ff' }}
+        floatingStyle={{ background: 'linear-gradient(45deg,  #03a7f8, #87CEEB)' }}
+        submitButtonStyle={{  color: '#000000' }}
       />
     );
   };
