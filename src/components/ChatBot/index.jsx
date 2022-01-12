@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const ChatBoot = (props) => {
+const ChatBot = (props) => {
     return <Container {...props} />;
 }
 
-export default ChatBoot;
+export default ChatBot;
