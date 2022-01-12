@@ -58,7 +58,7 @@ export default function ChatBotContainer() {
                 <div>
                   {" "}
                   Clique aqui:{" "}
-                  <Link href={opcao.solucao.href}>
+                  <Link href={opcao.solucao ? opcao.solucao.href : "Null"}>
                     <OpenInNewIcon />
                   </Link>
                 </div>
@@ -113,10 +113,12 @@ export default function ChatBotContainer() {
         placeholder="Digite aqui..."
         botAvatar="https://preview.redd.it/788khtqa7c551.png?width=960&crop=smart&auto=webp&s=a1f107f8f7af82ff61c2b9db3a511f7f81d3715c"
         steps={steps}
-        bubbleOptionStyle={{ background:'#86d1ff' }}
-        bubbleStyle={{ background:'#86d1ff' }}
-        floatingStyle={{ background: 'linear-gradient(45deg,  #03a7f8, #87CEEB)' }}
-        submitButtonStyle={{  color: '#000000' }}
+        bubbleOptionStyle={{ background: "#86d1ff" }}
+        bubbleStyle={{ background: "#86d1ff" }}
+        floatingStyle={{
+          background: "linear-gradient(45deg,  #03a7f8, #87CEEB)",
+        }}
+        submitButtonStyle={{ color: "#000000" }}
       />
     );
   };
