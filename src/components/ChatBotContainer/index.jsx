@@ -111,7 +111,7 @@ export default function ChatBotContainer() {
         headerTitle="SerraData"
         floating
         placeholder="Digite aqui..."
-        botAvatar="https://preview.redd.it/788khtqa7c551.png?width=960&crop=smart&auto=webp&s=a1f107f8f7af82ff61c2b9db3a511f7f81d3715c"
+        botAvatar="https://raw.githubusercontent.com/juniorcost4/widget-serradata/main/src/img/bot-avatar.png"
         steps={steps}
         bubbleOptionStyle={{ background: "#86d1ff" }}
         bubbleStyle={{ background: "#86d1ff" }}

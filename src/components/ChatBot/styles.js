@@ -9,4 +9,16 @@ export const Container = styled(ChatBot)`
   .rsc-header-title {
     font-size: 20px;
   }
+
+  .rsc-ts-bot .rsc-ts-bubble  {
+    background: #3198CC;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .rsc-ts-user .rsc-ts-bubble {
+    background: gray;
+    color: #fff;
+    font-weight: bold;
+  }
 `;
