@@ -5,13 +5,12 @@ import ChatBot from "../ChatBot";
 import ListaOpcoes from "../ListaOpcoes";
 import axios from "axios";
 
-const baseURL = "http://serradata.herokuapp.com/intencoes/";
-
-export default function ChatBotContainer() {
+export default function ChatBotContainer({ domElement }) {
   const [intencoes, setIntencoes] = useState([]);
   let steps = [];
 
   useEffect(() => {
+    const baseURL = domElement.dataset.apiUrl + "/intencoes";
     axios.get(baseURL).then((res) => {
       setIntencoes(res.data);
     });
