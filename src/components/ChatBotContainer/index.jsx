@@ -4,6 +4,7 @@ import { Link } from "@mui/material";
 import ChatBot from "../ChatBot";
 import ListaOpcoes from "../ListaOpcoes";
 import axios from "axios";
+import Content from "../Content";
 
 export default function ChatBotContainer({ domElement }) {
   const [intencoes, setIntencoes] = useState([]);
@@ -61,13 +62,7 @@ export default function ChatBotContainer({ domElement }) {
             steps.push({
               id: `solucao${intencaoId}-${i + 1}`,
               component: (
-                <div>
-                  {" "}
-                  Clique aqui:{" "}
-                  <Link href={opcao.solucao ? opcao.solucao.href : "Null"}>
-                    <OpenInNewIcon />
-                  </Link>
-                </div>
+                <Content element={opcao?.solucao?.conteudo}/>
               ),
               end: true,
             });
