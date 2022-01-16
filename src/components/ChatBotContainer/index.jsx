@@ -7,11 +7,18 @@ import axios from "axios";
 
 export default function ChatBotContainer({ domElement }) {
   const [intencoes, setIntencoes] = useState([]);
+  const [idIntencaoInicial, setIdIntencaoinicial] = useState(1);
   let steps = [];
 
   useEffect(() => {
-    const baseURL = domElement.dataset.apiUrl + "/intencoes";
-    axios.get(baseURL).then((res) => {
+    const baseURL = domElement.dataset.apiUrl;
+
+    axios.get(baseURL + "/config").then((res) => {
+      const config = JSON.parse(res.data.config);
+      setIdIntencaoinicial(config.idPerguntaInicialChatbot);
+    });
+    
+    axios.get(baseURL+ "/intencoes").then((res) => {
       setIntencoes(res.data);
     });
   }, []);
@@ -103,7 +110,7 @@ export default function ChatBotContainer({ domElement }) {
   };
 
   const criarChatBot = () => {
-    criarFluxo();
+    criarFluxo(idIntencaoInicial);
 
     return (
       <ChatBot
