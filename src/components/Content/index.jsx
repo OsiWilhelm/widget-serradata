@@ -13,7 +13,7 @@ export const Content = ({ element }) => {
     setComponente(element);
   }, []);
 
-  return <Container>{HtmlReactParser(componente)}</Container>;
+  return <Container>{HtmlReactParser(componente || "")}</Container>;
 };
 
 export default Content;
