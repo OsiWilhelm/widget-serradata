@@ -18,8 +18,8 @@ export default function ChatBotContainer({ domElement }) {
       const config = JSON.parse(res.data.config);
       setIdIntencaoinicial(config.idPerguntaInicialChatbot);
     });
-    
-    axios.get(baseURL+ "/intencoes").then((res) => {
+
+    axios.get(baseURL + "/intencoes").then((res) => {
       setIntencoes(res.data);
     });
   }, []);
@@ -61,9 +61,7 @@ export default function ChatBotContainer({ domElement }) {
           } else {
             steps.push({
               id: `solucao${intencaoId}-${i + 1}`,
-              component: (
-                <Content element={opcao?.solucao?.conteudo}/>
-              ),
+              component: <Content element={opcao?.solucao?.conteudo} />,
               end: true,
             });
           }
